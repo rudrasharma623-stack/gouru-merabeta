@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Gouru ❤️</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:#ffd6e7;color:#fff;text-align:center;overflow-x:hidden}
+.hero{padding:30px;background:linear-gradient(135deg,#ff7eb3,#ff4f81)}
+.slideshow{max-width:350px;margin:20px auto}
+.slideshow img{width:100%;border-radius:20px;box-shadow:0 0 20px rgba(0,0,0,.2)}
+.card{max-width:900px;margin:20px auto;padding:20px;background:rgba(255,255,255,.15);border-radius:20px;color:#fff}
+button{padding:12px 24px;border:none;border-radius:30px;font-size:18px;cursor:pointer;margin:10px}
+#yes{background:white}
+#no{position:relative}
+.heart{position:fixed;bottom:-20px;animation:float 8s linear infinite}
+@keyframes float{from{transform:translateY(0)}to{transform:translateY(-110vh)}}
+</style>
+</head>
+<body>
+<div class="hero">
+<h1>Sorry Gouru ❤️</h1>
+<h3>— Tera Rudru</h3>
+</div>
+
+<div class="slideshow">
+<img id="slide" src="photo1.jpeg">
+</div>
+
+<div class="card">
+<p>
+Dear Gouru ❤️,<br><br>
+Mere jo shabd the, jo bhi maine bola, I never meant it.
+Main dil se un sab baaton ke liye maafi maangta hoon.
+Mujhe apni galtiyon ka ehsaas hai aur mujhe bahut guilt feel hota hai.
+<br><br>
+27 November 2025 ko jab hamari pehli baat hui thi aur maine tumhari help ki thi,
+tab se lekar aaj tak ki har memory mere liye special hai.
+Pata hi nahi chala kab do ajanabi ek dusre ki duniya ban gaye.
+<br><br>
+Maine vaada kiya tha ki tumhe baap jaisa pyaar dunga, aur main aaj bhi us vaade ko nibhane ki poori koshish kar raha hoon, mera baccha 🫠❤️
+<br><br>
+Sorry Gouru. ILYSM ❤️
+</p>
+
+<h3>Things I Never Want To Forget About Us ❤️</h3>
+<p>✨ 27 November 2025 ki pehli baat</p>
+<p>✨ Hamari endless baatein</p>
+<p>✨ Tumhari smile</p>
+<p>✨ Har memory jo mere dil ke kareeb hai</p>
+
+<h2>Mujhe Maaf Karegi Na? 🥺</h2>
+<button id="yes" onclick="yesClick()">Haan ❤️</button>
+<button id="no">Naa 😅</button>
+</div>
+
+<script>
+const imgs=["photo1.jpeg","photo2.jpeg","photo3.jpeg"];
+let i=0;
+setInterval(()=>{
+ i=(i+1)%imgs.length;
+ document.getElementById("slide").src=imgs[i];
+},2500);
+
+for(let k=0;k<25;k++){
+ let h=document.createElement("div");
+ h.className="heart";
+ h.innerHTML="❤️";
+ h.style.left=Math.random()*100+"vw";
+ h.style.animationDuration=(5+Math.random()*6)+"s";
+ document.body.appendChild(h);
+}
+
+function yesClick(){
+ document.body.innerHTML=`
+ <div style="height:100vh;display:flex;justify-content:center;align-items:center;flex-direction:column;background:#ff7eb3">
+ <h1>🎆 ILYSM Gouru ❤️ 🎆</h1>
+ <h2>Mujhe pata tha mera prem hamesha jeetega ❤️</h2>
+ <h3>Thank You Gouru ❤️</h3>
+ <p>— Tera Rudru</p>
+ </div>`;
+}
+
+const no=document.getElementById("no");
+no.addEventListener("mouseover",()=>{
+ no.style.position="fixed";
+ no.style.left=Math.random()*(window.innerWidth-120)+"px";
+ no.style.top=Math.random()*(window.innerHeight-60)+"px";
+});
+</script>
+</body>
+<audio autoplay loop controls>
+    <source src="song.mp3" type="audio/mpeg">
+</audio>
+</html>
